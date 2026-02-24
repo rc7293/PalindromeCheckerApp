@@ -21,7 +21,6 @@ class MainActivity : ComponentActivity() {
             PalindromeCheckerAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,9 +30,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Welcome to Palindrome Checker Management System\nVersion : 1.0\nSystem initialized successfully.",
         modifier = modifier
     )
 }
@@ -42,6 +41,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     PalindromeCheckerAppTheme {
-        Greeting("Android")
+        Greeting()
     }
 }
